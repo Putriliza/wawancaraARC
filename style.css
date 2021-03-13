@@ -1,0 +1,196 @@
+html {
+    box-sizing: border-box;
+    }
+    
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: linear-gradient(120deg, rgb(34, 55, 70) 10%, rgb(44, 89, 128) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    margin: none;
+    display: flex;
+    align-items: center;
+    color: #00474b;
+    background: #fbfaeb;
+    z-index: 1;
+}
+
+.top-bar img {
+    border-radius: 100%;
+    height: 50px;
+    padding: 5px;
+    margin: 0px 10px;
+}
+
+.status {
+    position: relative;
+    top: 60px;
+    color: #003d41;
+    text-align: center;
+    background: #f7fdff;
+    opacity: 0.8;
+}
+
+/* PREVIEW CARD */
+
+.row {
+    padding: 0 10%;
+}
+
+.column{
+    position: relative;
+    float: left;
+    width: 50%;
+    top: 70px;
+    font-size: medium;
+    text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+.column {
+    width: 100%;
+    display: block;
+}
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.card {
+    background: #f7fdff;
+    margin: 0% 5% 10%;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 2px #00474b;
+}
+
+.card p {
+    color: #00474b;
+    margin: 1px;
+    font-size: small;
+}
+
+.card img {
+    width: 95%;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+.card button {
+    width: 90%;
+    color: #003d41;
+    background: #ffd000;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: medium;
+    font-weight: bold;
+    margin: 10px;
+    border: none;
+}
+
+.card button:hover {
+    cursor: pointer;
+    color: #fbfaeb;
+    background: #003d41;
+    box-shadow: 0 0 5px #333;
+    transition: 0.3s;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 70px 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.712);
+}
+
+.modal-content {
+    position: relative;
+    top: 15%;
+    text-align: center;
+    background-color: #fbfaeb;
+    border-radius: 5px;
+    width: 70%;
+    max-width: 500px;
+    overflow: auto;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animate;
+    -webkit-animation-duration: 0.2s;
+}
+
+/* RESPONSIVE */
+@-webkit-keyframes animate {
+    from {opacity:0; top: 10px}
+    to {opacity:1}
+}
+
+.modal-header {
+    padding: 2px 10px;
+    background-color: #ffd000;
+    color: white;
+}
+
+.modal-header p, h2 {
+    margin: 8px;
+    text-shadow: 2px 2px 4px #333;
+}
+
+.modal-body {
+    padding: 10px 30px;
+    font-size: small;
+    color: #003d41;
+}
+
+.text-left {
+    text-align: left;
+    padding: 0px 5%;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #003d41;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* SCROL BAR */
+    ::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffd000;
+}
